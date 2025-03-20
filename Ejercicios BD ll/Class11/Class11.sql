@@ -32,4 +32,6 @@ group by s.store_id, c.city, st.first_name, st.last_name
 
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+select count(fa.film_id) as Cantidad_de_Peliculas, a.first_name, a.last_name from actor a 
+inner join film_actor fa on fa.actor_id = a.actor_id
+group by a.actor_id order by Cantidad_de_Peliculas desc;
